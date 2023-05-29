@@ -70,4 +70,17 @@ replaceElem('#result_result_gv_home table', 'div');
      }
 
 
+    function updateTextBoxTermsAccept() {
+        var checkBox = document.getElementById('chkterms');
+    var textBox = document.getElementById('<%= txt_terms.ClientID %>');
+
+    if (checkBox.checked) {
+        textBox.value = "true";
+    checkBox.classList.add("checked-checkbox");
+        } else {
+        textBox.value = "";
+    checkBox.classList.remove("checked-checkbox");
+        }
+    }
+
 
